@@ -58,3 +58,10 @@ function k8() {
     let textnode = document.createTextNode(bestThingArr);
     document.getElementById("k8d").appendChild(textnode);
 }
+
+function k9() {
+    let thrones= gotCitiesCSV.split(',')
+    return thrones.filter(doubles [aa]|[ee]|[ii]|[oo]|[uu])
+    let textnode = document.createTextNode(gotCitiesArr);
+    document.getElementById("k9d").appendChild(textnode);
+}
