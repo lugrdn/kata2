@@ -10,20 +10,51 @@ const bestThing = "The best thing about a boolean is even if you are wrong you a
 
 function k1() {
     let gotCitiesArr = gotCitiesCSV.split(',');
-    // gotCitiesEle.textContent = JSON.stringify(gotCitiesArr);
-    var textnode = document.createTextNode(gotCitiesArr);
+    let textnode = document.createTextNode(gotCitiesArr);
     document.getElementById("k1d").appendChild(textnode);
 }
 
 function k2() {
     let bestThingArr = bestThing.split(',');
-    // gotCitiesEle.textContent = JSON.stringify(gotCitiesArr);
-    var textnode = document.createTextNode(bestThingArr);
+    let textnode = document.createTextNode(bestThingArr);
     document.getElementById("k2d").appendChild(textnode);
 }
 
 function k3() {
-    let gotCitiesArr = gotCitiesCSV.split(',');
-    var textnode = document.createTextNode(gotCitiesArr);
+    let gotCitiesArr = gotCitiesCSV.split(',').join(';');
+    let textnode = document.createTextNode(gotCitiesArr);
     document.getElementById("k3d").appendChild(textnode);
+}
+
+function k4() {
+    let lotrCitiesCSV = lotrCitiesArray.toString(',');
+    lotrCitiesCSV.textContent = JSON.stringify(lotrCitiesCSV);
+    let textnode = document.createTextNode(lotrCitiesCSV);
+    document.getElementById("k4d").appendChild(textnode);
+}
+
+function k5() {
+    let lotrCitiesCSV = lotrCitiesArray.slice(3).toString(',');
+    lotrCitiesCSV.textContent = JSON.stringify(lotrCitiesCSV);
+    let textnode = document.createTextNode(lotrCitiesCSV);
+    document.getElementById("k5d").appendChild(textnode);
+}
+
+function k6() {
+    let lotrCitiesCSV = lotrCitiesArray.splice(2,1).toString(',');
+    lotrCitiesCSV.textContent = JSON.stringify(lotrCitiesArray);
+    let textnode = document.createTextNode(lotrCitiesArray);
+    document.getElementById("k6d").appendChild(textnode);
+}
+
+function k7() {
+    let bestThingArr = bestThing.slice(23,38).split(',');
+    let textnode = document.createTextNode(bestThingArr);
+    document.getElementById("k7d").appendChild(textnode);
+}
+
+function k8() {
+    let bestThingArr = bestThing.slice(64,68).split(',');
+    let textnode = document.createTextNode(bestThingArr);
+    document.getElementById("k8d").appendChild(textnode);
 }
