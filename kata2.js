@@ -61,7 +61,21 @@ function k8() {
 
 function k9() {
     let thrones= gotCitiesCSV.split(',')
-    return thrones.filter(doubles [aa]|[ee]|[ii]|[oo]|[uu])
-    let textnode = document.createTextNode(gotCitiesArr);
-    document.getElementById("k9d").appendChild(textnode);
+    for (var i = 0; i<thrones.length; i++ ) {
+        var city = thrones[i]
+        if (city.includes('aa')||city.includes('ee')||city.includes('ii')||city.includes('oo')||city.includes('uu')) {
+            let textnode = document.createTextNode(city);
+            document.getElementById("k9d").appendChild(textnode);
+        }
+    }
+}
+
+function k10() {
+    lotrCitiesArray.sort(
+        function (a,b) {
+            return a.length-b.length;
+        }
+    );
+    let textnode = document.createTextNode(JSON.stringify(lotrCitiesArray));
+    document.getElementById("k10d").appendChild(textnode);
 }
